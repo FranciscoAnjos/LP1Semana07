@@ -1,43 +1,40 @@
-﻿using BetterColorSpheres;
-
-namespace ColorSpheres
+﻿namespace BetterColorSpheres
 {
     public class Sphere
     {
-        private readonly Color _color;
-        private int _radius;
+        public Color Color { get; }
+        public int Radius { get; private set; }
+
         private int _timesThrown;
+        public int TimesThrown
+        {
+            get => _timesThrown;
+            private set => _timesThrown = value;
+        }
 
         public Sphere(Color color, int radius)
         {
-            _color = color;
-            _radius = radius;
-            _timesThrown = 0;
+            Color = color;
+            Radius = radius;
+            TimesThrown = 0;
         }
-
-        public Color GetColor() => _color;
 
         public void Pop()
         {
-            _radius = 0;
+            Radius = 0;
         }
 
         public void Throw()
         {
-            if (_radius > 0)
+            if (Radius > 0)
             {
-                _timesThrown++;
+                TimesThrown++;
             }
-        }
-
-        public int GetTimesThrown()
-        {
-            return _timesThrown;
         }
 
         public override string ToString()
         {
-            return $"Sphere(Color: {_color}, Radius: {_radius}, Times Thrown: {_timesThrown})";
+            return $"Sphere(Color: {Color}, Radius: {Radius}, Times Thrown: {TimesThrown})";
         }
     }
 }
