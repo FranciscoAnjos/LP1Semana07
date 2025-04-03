@@ -13,6 +13,8 @@
             _timesThrown = 0;
         }
 
+        public Color GetColor() => _color;
+
         public void Pop()
         {
             _radius = 0;
