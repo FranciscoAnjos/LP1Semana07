@@ -20,7 +20,19 @@
                 return 1+XP/1000;
             }
         }
-        
 
+        public float Health
+        {
+            get =>health;
+            
+        }
+
+                public float MaxHealth
+        {
+            get
+            {
+                return 100 + (Level -1)*20;
+            }
+        }
     }
 }
