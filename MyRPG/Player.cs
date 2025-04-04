@@ -24,10 +24,21 @@
         public float Health
         {
             get =>health;
-            
+            set
+            {
+                if (0> health)
+                {
+                    health = 0;
+                }
+                if (health> MaxHealth)
+                {
+                    health = MaxHealth;
+                }    
+                else health = value;
+            }   
         }
 
-                public float MaxHealth
+         public float MaxHealth
         {
             get
             {
