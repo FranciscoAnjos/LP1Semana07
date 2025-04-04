@@ -9,25 +9,25 @@ namespace MyRPG
             Player player = new Player("Hero");
 
             Console.WriteLine($"Name: {player.Name}");      // Name: Hero
-            Console.WriteLine($"Level: {player.Level}");    // Level: 1
+            //Console.WriteLine($"Level: {player.Level}");    // Level: 1
             Console.WriteLine($"XP: {player.XP}");          // XP: 0
-            Console.WriteLine($"Health: {player.Health}/{player.MaxHealth}"); // Health: 100/100
+            //Console.WriteLine($"Health: {player.Health}/{player.MaxHealth}"); // Health: 100/100
 
             player.XP = 2500; // Aumenta XP para 2500
-            Console.WriteLine($"Level: {player.Level}");    // Level: 3
+            //Console.WriteLine($"Level: {player.Level}");    // Level: 3
             Console.WriteLine($"XP: {player.XP}");          // XP: 2500
-            Console.WriteLine($"MaxHealth: {player.MaxHealth}"); // MaxHealth: 140
+            //Console.WriteLine($"MaxHealth: {player.MaxHealth}"); // MaxHealth: 140
 
-            player.TakeDamage(45);
-            Console.WriteLine($"Health: {player.Health}/{player.MaxHealth}"); // Health: 55/140
+            //player.TakeDamage(45);
+            //Console.WriteLine($"Health: {player.Health}/{player.MaxHealth}"); // Health: 55/140
             Console.WriteLine($"XP: {player.XP}");          // XP: 2502
-            Console.WriteLine($"Level: {player.Level}");    // Level: 3
+            //Console.WriteLine($"Level: {player.Level}");    // Level: 3
 
-            player.Health = -10;  // Tentativa de colocar health negativa
-            Console.WriteLine($"Health: {player.Health}");  // Health: 0
+            //player.Health = -10;  // Tentativa de colocar health negativa
+            //Console.WriteLine($"Health: {player.Health}");  // Health: 0
 
-            player.Health = 5000; // Tentativa de ultrapassar maxHealth
-            Console.WriteLine($"Health: {player.Health}/{player.MaxHealth}"); // Health: 140/140
+            //player.Health = 5000; // Tentativa de ultrapassar maxHealth
+            //Console.WriteLine($"Health: {player.Health}/{player.MaxHealth}"); // Health: 140/140
 
             // Output esperado:
             //
