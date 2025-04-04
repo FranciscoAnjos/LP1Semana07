@@ -1,4 +1,6 @@
-﻿namespace MyRPG
+﻿using System.Data;
+
+namespace MyRPG
 {
     public class Player
     {
@@ -44,6 +46,17 @@
             {
                 return 100 + (Level -1)*20;
             }
+        }
+        public void TakeDamage(float damage)
+        {
+            health-=damage;
+            xp = (int) damage / 20;
+        }
+           public Player(string name)
+        {
+            Name = name;
+            Health = MaxHealth;
+            xp = 0;
         }
     }
 }
